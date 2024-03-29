@@ -2,6 +2,7 @@
 
 import { matchesType } from "@/types";
 import React, { useState } from "react";
+import LeagueTable from "../league-table/LeagueTable";
 
 const Status = ({
   matchesList,
@@ -51,15 +52,17 @@ const Status = ({
           ? matchesList?.map((matches) => (
               <div key={matches.id}>
                 {matches.status === "FINISHED" && (
-                  // <LeagueTable />
-                  <div>
-                    <h2 className="font-bold">
-                      {matches?.homeTeam?.name}- {matches?.awayTeam?.name}{" "}
-                    </h2>
-                    <h5>
-                      ( {matches?.status} - {matches?.utcDate} )
-                    </h5>
-                  </div>
+                  <>
+                    <LeagueTable matches={matches} />
+                    <div>
+                      <h2 className="font-bold">
+                        {matches?.homeTeam?.name}- {matches?.awayTeam?.name}{" "}
+                      </h2>
+                      <h5>
+                        ( {matches?.status} - {matches?.utcDate} )
+                      </h5>
+                    </div>
+                  </>
                 )}
               </div>
             ))
@@ -68,15 +71,17 @@ const Status = ({
           ? matchesListFinished?.map((matches) => (
               <div key={matches.id}>
                 {matches.status === "FINISHED" && (
-                  // <LeagueTable />
-                  <div>
-                    <h2 className="font-bold">
-                      {matches?.homeTeam?.name}- {matches?.awayTeam?.name}{" "}
-                    </h2>
-                    <h5>
-                      ( {matches?.status} - {matches?.utcDate} )
-                    </h5>
-                  </div>
+                  <>
+                    <LeagueTable matches={matches} />
+                    <div>
+                      <h2 className="font-bold">
+                        {matches?.homeTeam?.name}- {matches?.awayTeam?.name}{" "}
+                      </h2>
+                      <h5>
+                        ( {matches?.status} - {matches?.utcDate} )
+                      </h5>
+                    </div>
+                  </>
                 )}
               </div>
             ))
@@ -90,15 +95,17 @@ const Status = ({
                     "LIVE" ||
                     "IN_PLAY" ||
                     "PAUSED") && (
-                  // <LeagueTable />
-                  <div>
-                    <h2 className="font-bold">
-                      {matches?.homeTeam?.name}- {matches?.awayTeam?.name}{" "}
-                    </h2>
-                    <h5>
-                      ( {matches?.status} - {matches?.utcDate} )
-                    </h5>
-                  </div>
+                  <>
+                    <LeagueTable matches={matches} />
+                    <div>
+                      <h2 className="font-bold">
+                        {matches?.homeTeam?.name}- {matches?.awayTeam?.name}{" "}
+                      </h2>
+                      <h5>
+                        ( {matches?.status} - {matches?.utcDate} )
+                      </h5>
+                    </div>
+                  </>
                 )}
               </div>
             ))
@@ -107,15 +114,17 @@ const Status = ({
           ? matchesList?.map((matches) => (
               <div key={matches.id}>
                 {matches.status === ("LIVE" || "IN_PLAY" || "PAUSED") && (
-                  // <LeagueTable />
-                  <div>
-                    <h2 className="font-bold">
-                      {matches?.homeTeam?.name}- {matches?.awayTeam?.name}{" "}
-                    </h2>
-                    <h5>
-                      ( {matches?.status} - {matches?.utcDate} )
-                    </h5>
-                  </div>
+                  <>
+                    <LeagueTable matches={matches} />
+                    <div>
+                      <h2 className="font-bold">
+                        {matches?.homeTeam?.name}- {matches?.awayTeam?.name}{" "}
+                      </h2>
+                      <h5>
+                        ( {matches?.status} - {matches?.utcDate} )
+                      </h5>
+                    </div>
+                  </>
                 )}
               </div>
             ))
