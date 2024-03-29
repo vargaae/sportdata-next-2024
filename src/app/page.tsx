@@ -1,4 +1,5 @@
 import { getMatchesFootball, getMatchesFootballFinished } from "@/api";
+import Status from "@/components/status/Status";
 
 export default async function Home() {
   const getDatas = await getMatchesFootball();
@@ -18,16 +19,10 @@ export default async function Home() {
           <p>{`${dateConvert}`}</p>
         </div>
       </div>
-      {matchesDatas?.map((matches: any) => (
-        <div key={matches.id}>
-          <h2 className="font-bold">
-            {matches?.homeTeam?.name}- {matches?.awayTeam?.name}{" "}
-          </h2>
-          <h5>
-            ( {matches?.status} - {matches?.utcDate} )
-          </h5>{" "}
-        </div>
-      ))}
+      <Status
+        matchesList={matchesDatas}
+        matchesListFinished={matchesDatasFinished}
+      />
     </section>
   );
 }
