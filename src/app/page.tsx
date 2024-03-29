@@ -1,4 +1,4 @@
-export default function Home() {
+export default async function Home() {
   const nd = new Date();
   const dateConvert = nd.toDateString();
 
@@ -10,7 +10,7 @@ export default function Home() {
           <p>{`${dateConvert}`}</p>
         </div>
       </div>
-      {/* data matches */}
+      {/* football-data */}
     </section>
   );
 }
