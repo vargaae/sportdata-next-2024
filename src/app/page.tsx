@@ -1,4 +1,12 @@
+import { getMatchesFootball, getMatchesFootballFinished } from "@/api";
+
 export default async function Home() {
+  const getDatas = await getMatchesFootball();
+  const getDatasFinished = await getMatchesFootballFinished();
+
+  const matchesDatas = getDatas?.matches;
+  const matchesDatasFinished = getDatasFinished?.matches;
+
   const nd = new Date();
   const dateConvert = nd.toDateString();
 
@@ -10,7 +18,16 @@ export default async function Home() {
           <p>{`${dateConvert}`}</p>
         </div>
       </div>
-      {/* football-data */}
+      {matchesDatas?.map((matches: any) => (
+        <div key={matches.id}>
+          <h2 className="font-bold">
+            {matches?.homeTeam?.name}- {matches?.awayTeam?.name}{" "}
+          </h2>
+          <h5>
+            ( {matches?.status} - {matches?.utcDate} )
+          </h5>{" "}
+        </div>
+      ))}
     </section>
   );
 }
