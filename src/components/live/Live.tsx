@@ -9,22 +9,25 @@ const Live = ({ matches }: { matches: matchesType }) => {
     return imageSrcLive;
   };
 
-  function formatFinishTime(): Date {
-    const finishTime = new Date(matches?.utcDate);
+  const nd = new Date(matches?.utcDate);
+
+  function formatFinishTime(nd: Date): Date {
+    // I make a copy of the original UTC date of the start time of the football match
+    const finishTime = nd;
     // FINISH TIME OF THE MATCH: REGULAR TIME: 90minutes in Football-> Add one and a half hours (in milliseconds)
     finishTime.setUTCHours(finishTime.getUTCHours() + 1);
     finishTime.setUTCMinutes(finishTime.getUTCMinutes() + 30);
+
     return finishTime;
   }
 
-  const nd = new Date(matches?.utcDate);
   const dateConvert =
     nd.toLocaleTimeString("en-UK", {
       hour: "2-digit",
       minute: "2-digit",
     }) +
     " - ~" +
-    formatFinishTime().toLocaleTimeString("en-UK", {
+    formatFinishTime(nd).toLocaleTimeString("en-UK", {
       hour: "2-digit",
       minute: "2-digit",
     });
