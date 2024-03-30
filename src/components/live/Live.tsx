@@ -9,10 +9,13 @@ const Live = ({ matches }: { matches: matchesType }) => {
     return imageSrcLive;
   };
 
-  let finishTime = new Date(matches?.utcDate);
-  // FINISH TIME OF THE MATCH: REGULAR TIME: 90minutes in Football-> Add one and a half hours (in milliseconds)
-  finishTime.setUTCHours(finishTime.getUTCHours() + 1);
-  finishTime.setUTCMinutes(finishTime.getUTCMinutes() + 30);
+  function formatFinishTime(): Date {
+    const finishTime = new Date(matches?.utcDate);
+    // FINISH TIME OF THE MATCH: REGULAR TIME: 90minutes in Football-> Add one and a half hours (in milliseconds)
+    finishTime.setUTCHours(finishTime.getUTCHours() + 1);
+    finishTime.setUTCMinutes(finishTime.getUTCMinutes() + 30);
+    return finishTime;
+  }
 
   const nd = new Date(matches?.utcDate);
   const dateConvert =
@@ -21,7 +24,7 @@ const Live = ({ matches }: { matches: matchesType }) => {
       minute: "2-digit",
     }) +
     " - ~" +
-    finishTime.toLocaleTimeString("en-UK", {
+    formatFinishTime().toLocaleTimeString("en-UK", {
       hour: "2-digit",
       minute: "2-digit",
     });
