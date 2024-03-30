@@ -22,11 +22,11 @@ const Competition = ({ matches }: { matches: matchesType }) => {
           unoptimized
           loader={imageLoader}
           src={matches?.competition?.emblem}
-          alt={matches?.competition.name}
+          alt={matches?.competition?.name}
           width={20}
           height={20}
         />
-        <p className="text-sm text-teal-400">{matches?.competition.name}</p>
+        <p className="text-sm text-teal-400">{matches?.competition?.name}</p>
       </div>
       <p className="text-xs md:text-sm">{dateConvert}</p>
     </div>
