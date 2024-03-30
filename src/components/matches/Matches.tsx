@@ -7,7 +7,7 @@ const Matches = ({ matches }: { matches: matchesType }) => {
   const imageLoaderAway = ({}) => {
     return `${matches?.awayTeam?.crest!}`;
   };
-  const getDate = new Date(matches?.utcDate).toLocaleTimeString("en-US", {
+  const getDate = new Date(matches?.utcDate).toLocaleTimeString("en-UK", {
     hour: "2-digit",
     minute: "2-digit",
   });
@@ -33,7 +33,7 @@ const Matches = ({ matches }: { matches: matchesType }) => {
             {matches?.score?.fullTime.home} : {matches.score?.fullTime.away}
           </p>
         ) : (
-          <p className="py-1 text-teal-400 text-xs">{getDate}</p>
+          <p className="py-1 text-teal-400 text-xs">Match's start: {getDate}</p>
         )}
       </div>
       <div className="w-full flex items-center justify-end">

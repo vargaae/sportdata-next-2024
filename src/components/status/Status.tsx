@@ -49,7 +49,7 @@ const Status = ({
       </div>
       <div className="w-full">
         {statusMatch === "FINISHED"
-          ? matchesList?.map((matches) => (
+          ? matchesList?.toReversed().map((matches) => (
               <div key={matches.id}>
                 {matches.status === "FINISHED" && (
                   <LeagueTable matches={matches} />
@@ -58,7 +58,7 @@ const Status = ({
             ))
           : null}
         {statusMatch === "FINISHED"
-          ? matchesListFinished?.map((matches) => (
+          ? matchesListFinished?.toReversed().map((matches) => (
               <div key={matches.id}>
                 {matches.status === "FINISHED" && (
                   <LeagueTable matches={matches} />
@@ -69,19 +69,66 @@ const Status = ({
         {statusMatch === "TODAY"
           ? matchesList?.map((matches) => (
               <div key={matches.id}>
-                {matches.status ===
-                  ("TIMED" ||
-                    "SCHEDULED" ||
-                    "LIVE" ||
-                    "IN_PLAY" ||
-                    "PAUSED") && <LeagueTable matches={matches} />}
+                {matches.status === "TIMED" && (
+                  <LeagueTable matches={matches} />
+                )}
+              </div>
+            ))
+          : null}
+        {statusMatch === "TODAY"
+          ? matchesList?.map((matches) => (
+              <div key={matches.id}>
+                {matches.status === "SCHEDULED" && (
+                  <LeagueTable matches={matches} />
+                )}
+              </div>
+            ))
+          : null}
+        {statusMatch === "TODAY"
+          ? matchesList?.map((matches) => (
+              <div key={matches.id}>
+                {matches.status === "LIVE" && <LeagueTable matches={matches} />}
+              </div>
+            ))
+          : null}
+        {statusMatch === "TODAY"
+          ? matchesList?.map((matches) => (
+              <div key={matches.id}>
+                {matches.status === "IN_PLAY" && (
+                  <LeagueTable matches={matches} />
+                )}
+              </div>
+            ))
+          : null}
+        {statusMatch === "TODAY"
+          ? matchesList?.map((matches) => (
+              <div key={matches.id}>
+                {matches.status === "PAUSED" && (
+                  <LeagueTable matches={matches} />
+                )}
               </div>
             ))
           : null}
         {statusMatch === "LIVE"
           ? matchesList?.map((matches) => (
               <div key={matches.id}>
-                {matches.status === ("LIVE" || "IN_PLAY" || "PAUSED") && (
+                {matches.status === "LIVE" && <LeagueTable matches={matches} />}
+              </div>
+            ))
+          : null}
+        {statusMatch === "LIVE"
+          ? matchesList?.map((matches) => (
+              <div key={matches.id}>
+                {matches.status === "IN_PLAY" && (
+                  <LeagueTable matches={matches} />
+                )}
+              </div>
+            ))
+          : null}
+        {statusMatch === "LIVE"
+          ? matchesList?.map((matches) => (
+              <div key={matches.id}>
+                {matches.status === "PAUSED" && (
                   <LeagueTable matches={matches} />
                 )}
               </div>

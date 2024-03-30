@@ -21,14 +21,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="px-2 md:px-16 md:py-2 text-textPrimary h-screen w-full bg-gradient-to-br from-indigo-200 via-white to-cyan-100">
-          <Navbar />
-          <section className="flex spaxe-x-4">
-            <Sidebar />
-            {children}
-            {/* news */}
-          </section>
-        </main>
+        {/* <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-200 via-white to-cyan-100"> */}
+          <main className="px-2 md:px-16 md:py-2 text-textPrimary">
+            <Navbar />
+            <section className="flex spaxe-x-4">
+              <Sidebar />
+              {children}
+              {/* news */}
+            </section>
+          </main>
+        {/* </div> */}
       </body>
     </html>
   );

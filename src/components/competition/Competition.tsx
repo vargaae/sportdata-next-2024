@@ -7,10 +7,16 @@ const Competition = ({ matches }: { matches: matchesType }) => {
     return `${matches?.competition?.emblem}`;
   };
   const nd = new Date(matches?.utcDate);
-  const dateConvert = nd.toLocaleDateString() + " " + nd.toLocaleTimeString();
+  const dateConvert =
+    nd.toLocaleDateString() +
+    " " +
+    nd.toLocaleTimeString("en-UK", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
 
   return (
-    <div className="bg-slate-600 hover:bg-slate-700 rounded-md mb-2 mb-4 flex justify-between items-center px-4 py-1">
+    <div className="bg-slate-600 hover:bg-slate-700 rounded-md mb-4 flex justify-between items-center px-4 py-1">
       <div className="flex space-x-4">
         <Image
           unoptimized
