@@ -52,17 +52,7 @@ const Status = ({
           ? matchesList?.map((matches) => (
               <div key={matches.id}>
                 {matches.status === "FINISHED" && (
-                  <>
-                    <LeagueTable matches={matches} />
-                    <div>
-                      <h2 className="font-bold">
-                        {matches?.homeTeam?.name}- {matches?.awayTeam?.name}{" "}
-                      </h2>
-                      <h5>
-                        ( {matches?.status} - {matches?.utcDate} )
-                      </h5>
-                    </div>
-                  </>
+                  <LeagueTable matches={matches} />
                 )}
               </div>
             ))
@@ -71,17 +61,7 @@ const Status = ({
           ? matchesListFinished?.map((matches) => (
               <div key={matches.id}>
                 {matches.status === "FINISHED" && (
-                  <>
-                    <LeagueTable matches={matches} />
-                    <div>
-                      <h2 className="font-bold">
-                        {matches?.homeTeam?.name}- {matches?.awayTeam?.name}{" "}
-                      </h2>
-                      <h5>
-                        ( {matches?.status} - {matches?.utcDate} )
-                      </h5>
-                    </div>
-                  </>
+                  <LeagueTable matches={matches} />
                 )}
               </div>
             ))
@@ -94,19 +74,7 @@ const Status = ({
                     "SCHEDULED" ||
                     "LIVE" ||
                     "IN_PLAY" ||
-                    "PAUSED") && (
-                  <>
-                    <LeagueTable matches={matches} />
-                    <div>
-                      <h2 className="font-bold">
-                        {matches?.homeTeam?.name}- {matches?.awayTeam?.name}{" "}
-                      </h2>
-                      <h5>
-                        ( {matches?.status} - {matches?.utcDate} )
-                      </h5>
-                    </div>
-                  </>
-                )}
+                    "PAUSED") && <LeagueTable matches={matches} />}
               </div>
             ))
           : null}
@@ -114,17 +82,7 @@ const Status = ({
           ? matchesList?.map((matches) => (
               <div key={matches.id}>
                 {matches.status === ("LIVE" || "IN_PLAY" || "PAUSED") && (
-                  <>
-                    <LeagueTable matches={matches} />
-                    <div>
-                      <h2 className="font-bold">
-                        {matches?.homeTeam?.name}- {matches?.awayTeam?.name}{" "}
-                      </h2>
-                      <h5>
-                        ( {matches?.status} - {matches?.utcDate} )
-                      </h5>
-                    </div>
-                  </>
+                  <LeagueTable matches={matches} />
                 )}
               </div>
             ))

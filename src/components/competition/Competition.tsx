@@ -13,6 +13,7 @@ const Competition = ({ matches }: { matches: matchesType }) => {
     <div className="bg-slate-600 hover:bg-slate-700 rounded-md mb-2 mb-4 flex justify-between items-center px-4 py-1">
       <div className="flex space-x-4">
         <Image
+          unoptimized
           loader={imageLoader}
           src={matches?.competition?.emblem}
           alt={matches?.competition.name}
