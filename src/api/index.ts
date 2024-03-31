@@ -36,7 +36,9 @@ export const filterLeague = async (filterData: string) => {
   const getLeague = await getMatchesFootball();
   const filterLeague: matchesType[] = getLeague?.matches;
   const getData = filterLeague.filter(
+  // const getData = filterLeague.slice().filter(
     (item) => item.competition.name === filterData
+    // (item) => item.competition.code === filterData
   );
   return getData;
 };

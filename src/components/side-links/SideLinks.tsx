@@ -10,7 +10,7 @@ type linkProps = {
 const SideLinks = ({ href, name, src }: linkProps) => {
   return (
     <Link
-      href={href}
+      href={name}
       className="flex items-center py-2 px-2 rounded-md text-textSecondary hover:bg-[rgb(54,63,78)]"
     >
       <Image unoptimized src={src} alt={name} width={20} height={20} />

@@ -13,6 +13,7 @@ export type matchesArea = {
 export type matchesCompetition = {
   id?: number;
   name: string;
+  code: string;
   emblem: string;
 };
 export type matchesHomeTeam = {

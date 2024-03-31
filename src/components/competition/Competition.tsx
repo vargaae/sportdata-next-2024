@@ -3,9 +3,9 @@ import Image from "next/image";
 import { matchesType } from "@/types";
 
 const Competition = ({ matches }: { matches: matchesType }) => {
-  const imageLoader = ({}) => {
-    return `${matches?.competition?.emblem}`;
-  };
+  // const imageLoader = ({}) => {
+  //   return `${matches?.competition?.emblem}`;
+  // };
   const nd = new Date(matches?.utcDate);
   const dateConvert =
     nd.toLocaleDateString() +
@@ -20,7 +20,6 @@ const Competition = ({ matches }: { matches: matchesType }) => {
       <div className="flex space-x-4">
         <Image
           unoptimized
-          loader={imageLoader}
           src={matches?.competition?.emblem}
           alt={matches?.competition?.name}
           width={20}
