@@ -40,3 +40,8 @@ export const filterLeague = async (filterData: string) => {
   );
   return getData;
 };
+
+export const getNewsInfo = async () => {
+  const newsData = await fetch(`https://newsapi.org/v2/everything?apiKey=${process.env.NEWS_API_KEY}&q=soccer&pageSize=5`,{next:{revalidate:30}})
+  return newsData.json()
+}
