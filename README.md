@@ -20,12 +20,12 @@ Sport App fetches data from different API-s about sport championships, matches l
 ## 🛠 Features:
 
 - Football Matches - Start time - finish time (REGULAR match time):
--> Today Matches [TIMED]
--> Live Matches [LIVE] | [IN_PLAY] | [PAUSED]
--> Finished Matches (Today's and Yesterdays' matches)
--> Finished Matches Scores
--> Leagues filter for Matches
--> Sport News
+- Today Matches [TIMED]
+- Live Matches [LIVE] | [IN_PLAY] | [PAUSED]
+- Finished Matches (Today's and Yesterdays' matches)
+- Finished Matches Scores
+- Leagues filter for Matches
+- Sport News
 
 ## ▲ Next.js 14.1.4
 
