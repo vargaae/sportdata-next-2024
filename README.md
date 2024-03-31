@@ -1,21 +1,37 @@
 # SportDATA Web App - Next JS | Typescript | API
 
 <div align="center">
-  <img alt="Application image" src="https://github.com/vargaae/football-bg/blob/main/public/footballapp.png" />
+  <img alt="Application image" src="https://vargaae.hu/images/projects/sportdata-git.png" width="700" />
 </div>
 <br>
-<p align="center">
-Sport App fetches data from different API-s about sport championships, matches like Football API.
-</p>
- 🚀 Will be Deployed on Render : 
- (https://sportdata-next-2024.onrender.com)
-<img alt="Application image" src="https://i.pinimg.com/474x/8b/7c/ac/8b7cac4d85303b79158dd3cf2d9b63c8.jpg"/>
+  <div align="center">
+    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=next&color=61DAFB%22" alt="NextJS" />
+    <img src="https://img.shields.io/badge/-Typescript-black?style=for-the-badge&logoColor=white&logo=typescript&color=06B6D4" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/-React_JS-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" />
+    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+  </div>
+<br>
+<h1 align="center">
+Sport App fetches data from different API-s about sport championships, matches like Football-data and News API.
+</h1>
+<h2 align="center"> 🚀 NEW NEXTJS VERSION OF SPORTDATA APP with Football-data and News - Deployed on Render : </h2>
+<p align="center"> (https://sportdata-next-2024.onrender.com)</p>
+
+## 🛠 Features:
+
+- Football Matches - Start time - finish time (REGULAR match time):
+-> Today Matches [TIMED]
+-> Live Matches [LIVE] | [IN_PLAY] | [PAUSED]
+-> Finished Matches (Today's and Yesterdays' matches)
+-> Finished Matches Scores
+-> Leagues filter for Matches
+-> Sport News
 
 ## ▲ Next.js 14.1.4
- 
-## 🛠 Front End: 
+
+## 🛠 Front End:
+
 - React 18.2
-- Redux Toolkit
 - TypeScript
 - TailwindCSS
 
