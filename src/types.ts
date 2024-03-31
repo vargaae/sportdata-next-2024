@@ -51,5 +51,5 @@ export type matchesType = {
 export type newsType = {
   title: string,
   url: string,
-  urlToImage: string,
+  urlToImage?: string,
 }

@@ -26,6 +26,24 @@ const nextConfig = {
         port: "",
         pathname: "/*/**",
       },
+      {
+        protocol: "https",
+        hostname: "readwrite.com",
+        port: "",
+        pathname: "/*/**",
+      },
+      {
+        protocol: "https",
+        hostname: "venturebeat.com",
+        port: "",
+        pathname: "/*/**",
+      },
+      {
+        protocol: "https",
+        hostname: "cnet.com",
+        port: "",
+        pathname: "/*/**",
+      },
     ],
   },
 };
