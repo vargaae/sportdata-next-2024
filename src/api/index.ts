@@ -43,9 +43,20 @@ export const filterLeague = async (filterData: string) => {
   return getData;
 };
 
+export const filterFinishedMatches = async (filterData: string) => {
+  const getMatches = await getMatchesFootball();
+  const filterMatches: matchesType[] = getMatches?.matches;
+  const getFinishedMatchesData = filterMatches.filter(
+  // const getFinishedMatchesData = filterLeague.slice().filter(
+    (item) => item.status === "FINISHED"
+    // (item) => item.status === filterData
+  );
+  return getFinishedMatchesData;
+};
+
 export const getNewsInfo = async () => {
   const newsData = await fetch(
-    `https://newsapi.org/v2/everything?apiKey=${process.env.NEWS_API_KEY}&q=soccer&pageSize=7`,
+    `https://newsapi.org/v2/everything?apiKey=${process.env.NEWS_API_KEY}&q=sport&pageSize=7`,
     { next: { revalidate: 30 } }
   );
   return newsData.json();

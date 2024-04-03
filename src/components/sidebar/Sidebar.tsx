@@ -10,7 +10,7 @@ const Sidebar: FC = async () => {
     <section className="px-2 md:px-4 py-2 bg-[rgb(45,59,87)] rounded-md">
       <div>
         <h1 className="font-bold text-xl mb-4 text-textBlue">
-          Leagues |
+          Sport{` > `}Football Leagues |
           <Link href="/" className="text-teal-200">
             Matches
           </Link>
