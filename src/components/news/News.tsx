@@ -9,7 +9,7 @@ const News = async () => {
   const newsData: newsType[] = getNews.articles;
 
   return (
-    <div className="w-[350px] bg-gradient-to-b from-zinc-900 to-transparent rounded-md px-2 md:px-6 py-2">
+    <div className="md:w-[350px] bg-gradient-to-b from-zinc-900 to-transparent rounded-md px-2 md:px-6 py-2">
       <h1 className="text-xl text-teal-400 font-bold mb-4">
         SportNEWS - Top Headlines
       </h1>

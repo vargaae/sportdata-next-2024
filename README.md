@@ -24,7 +24,7 @@ Sport App fetches data from different API-s about sport championships, matches l
 - Live Matches [LIVE] | [IN_PLAY] | [PAUSED]
 - Finished Matches (Today's and Yesterdays' matches)
 - Finished Matches Scores
-- Leagues filter for Matches
+- Leagues filter for Matches with breadcrumbs navigation
 - Sport News
 
 ## ▲ Next.js 14.1.4

@@ -35,8 +35,18 @@ export const getMatchesFootballFinished = async () => {
 export const filterLeague = async (filterData: string) => {
   const getLeague = await getMatchesFootball();
   const filterLeague: matchesType[] = getLeague?.matches;
-  const getData = filterLeague.filter(
-  // const getData = filterLeague.slice().filter(
+  // const getData = filterLeague.filter(
+  const getData = filterLeague.slice().filter(
+    (item) => item.competition.name === filterData
+    // (item) => item.competition.code === filterData
+  );
+  return getData;
+};
+export const filterLeagueFinished = async (filterData: string) => {
+  const getLeague = await getMatchesFootballFinished();
+  const filterLeague: matchesType[] = getLeague?.matches;
+  // const getData = filterLeague.filter(
+  const getData = filterLeague.slice().filter(
     (item) => item.competition.name === filterData
     // (item) => item.competition.code === filterData
   );
