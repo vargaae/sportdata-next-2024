@@ -51,7 +51,7 @@ const Status = ({
         {statusMatch === "FINISHED"
           ? matchesList?.toReversed().map((matches) => (
               <div key={matches.id}>
-                {matches.status === "TIMED" && (
+                {matches.status === "FINISHED" && (
                   <LeagueTable matches={matches} />
                 )}
               </div>
@@ -60,7 +60,7 @@ const Status = ({
         {statusMatch === "FINISHED"
           ? matchesListFinished?.toReversed().map((matches) => (
               <div key={matches.id}>
-                {matches.status === "TIMED" && (
+                {matches.status === "FINISHED" && (
                   <LeagueTable matches={matches} />
                 )}
               </div>
