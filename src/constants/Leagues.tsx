@@ -7,5 +7,6 @@ export const Leagues = [
   { id: 6, name: "Championship", href: "championship", emblem: "/img/leagues/championship.webp" },
   { id: 7, name: "Primeira Liga", href: "primeira-liga", emblem: "/img/leagues/liga_portugal.webp" },
   { id: 8, name: "Brazilian Championship Series A", href: "brazilian-series-a", emblem: "/img/leagues/brazilian_serie_a.webp" },
+  { id: 9, name: "Eredivisie", href: "eredivisie", emblem: "/img/leagues/eredivisie.png" },
   // { id: 9, name: "Copa Libertadores", href: "copa-libertadores", emblem: "/img/leagues/copa_libertadores.webp" },
 ];
