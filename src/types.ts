@@ -38,6 +38,10 @@ export type scores = {
 };
 
 export type matchesType = {
+  code: string;
+  emblem: string;
+  name: string;
+  plan: string;
   area: matchesArea;
   competition: matchesCompetition;
   id: number;

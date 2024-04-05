@@ -1,9 +1,12 @@
-import { filterLeague } from "@/api";
+import { filterLeague, filterLeagueFinished } from "@/api";
 import LeagueTable from "@/components/league-table/LeagueTable";
 import Link from "next/link";
 
 const Ligue1 = async () => {
-  const getLigue1 = await filterLeague("Ligue 1");
+  const league = "Ligue 1";
+
+  const getLigue1 = await filterLeague(league);
+  const getLigue1LeagueFinished = await filterLeagueFinished(league);
 
   const nd = new Date();
   const dateConvert = nd.toDateString();
@@ -22,11 +25,40 @@ const Ligue1 = async () => {
           <p>{`${dateConvert}`}</p>
         </div>
       </div>
-      {getLigue1.map((data) => (
-        <div key={data.id}>
-          <LeagueTable matches={data} />
+      {getLigue1.length == 0 ? (
+        <div className="py-3 px-2 md:px-3 rounded-md flex flex-col bg-gradient-to-b from-[rgb(45,59,87)] to-transparent text-primary mb-2">
+          <p>No scheduled matches found in {league} League...</p>
+          <Link
+            href="/premier-league"
+            className="flex items-center py-2 px-2 rounded-md text-textSecondary hover:bg-[rgb(54,63,78)]"
+          >
+            {"->"}You can try instead: Premier League
+          </Link>
         </div>
-      ))}
+      ) : (
+        getLigue1.map((data) => (
+          <div key={data.id}>
+            <LeagueTable matches={data} />
+          </div>
+        ))
+      )}
+      {getLigue1LeagueFinished.length == 0 ? (
+        <div className="py-3 px-2 md:px-3 rounded-md flex flex-col bg-gradient-to-b from-[rgb(45,59,87)] to-transparent text-primary mb-2">
+          <p>No finished matches found in {league} League...</p>
+          <Link
+            href="/premier-league"
+            className="flex items-center py-2 px-2 rounded-md text-textSecondary hover:bg-[rgb(54,63,78)]"
+          >
+            {"->"}You can try instead: Premier League
+          </Link>
+        </div>
+      ) : (
+        getLigue1LeagueFinished.map((data) => (
+          <div key={data.id}>
+            <LeagueTable matches={data} />
+          </div>
+        ))
+      )}
     </section>
   );
 };

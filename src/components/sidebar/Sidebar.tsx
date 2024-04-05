@@ -3,7 +3,6 @@ import { FC } from "react";
 import SideLinks from "../side-links/SideLinks";
 
 import { Leagues } from "@/constants/Leagues";
-import Link from "next/link";
 
 const Sidebar: FC = async () => {
   return (

@@ -15,6 +15,14 @@ export const getMatchesFootball = async () => {
   return matchData.json();
 };
 
+export const getLeaguesFootball = async () => {
+  const matchData = await fetch(
+    "https://api.football-data.org/v4/competitions",
+    options
+  );
+  return matchData.json();
+};
+
 const todayDate = new Date();
 const getDateMonth = new Date(todayDate.getTime());
 getDateMonth.setDate(todayDate.getDate() - 1);
