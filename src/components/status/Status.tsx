@@ -11,20 +11,20 @@ const Status = ({
   matchesList: matchesType[];
   matchesListFinished: matchesType[];
 }) => {
-  const [statusMatch, setStatusMatch] = useState<string>("ALL");
+  const [statusMatch, setStatusMatch] = useState<string>("FINISHED");
 
   return (
     <div>
       <div className="flex space-x-4 mb-2 md:mb-4">
-        <button
-          onClick={() => setStatusMatch("ALL")}
-          className={`px-2 py-1 text-primary text-xs md:text-sm rounded-md ${
-            statusMatch === "ALL"
+      <button
+          onClick={() => setStatusMatch("FINISHED")}
+          className={`px-2 py-1 text-primary text-sm rounded-md ${
+            statusMatch === "FINISHED"
               ? "bg-teal-400 font-semibold"
               : "bg-slate-500 font-regular"
           }`}
         >
-          all
+          finished
         </button>
         <button
           onClick={() => setStatusMatch("TODAY")}
@@ -46,44 +46,25 @@ const Status = ({
         >
           live
         </button>
-        <button
-          onClick={() => setStatusMatch("FINISHED")}
-          className={`px-2 py-1 text-primary text-sm rounded-md ${
-            statusMatch === "FINISHED"
-              ? "bg-teal-400 font-semibold"
-              : "bg-slate-500 font-regular"
-          }`}
-        >
-          finished
-        </button>
       </div>
       <div className="w-full">
-        {statusMatch === "ALL"
-          ? matchesList?.map((matches) => (
-              <div key={matches.id}>{<LeagueTable matches={matches} />}</div>
+        {statusMatch === "FINISHED"
+          ? matchesList?.toReversed().map((matches) => (
+              <div key={matches.id}>
+                {matches.status === "FINISHED" && (
+                  <LeagueTable matches={matches} />
+                )}
+              </div>
             ))
           : null}
         {statusMatch === "FINISHED"
-          ? matchesList
-              ?.toReversed()
-              .map((matches) => (
-                <div key={matches.id}>
-                  {matches.status === "FINISHED" && (
-                    <LeagueTable matches={matches} />
-                  )}
-                </div>
-              ))
-          : null}
-        {statusMatch === "FINISHED"
-          ? matchesListFinished
-              ?.toReversed()
-              .map((matches) => (
-                <div key={matches.id}>
-                  {matches.status === "FINISHED" && (
-                    <LeagueTable matches={matches} />
-                  )}
-                </div>
-              ))
+          ? matchesListFinished?.toReversed().map((matches) => (
+              <div key={matches.id}>
+                {matches.status === "FINISHED" && (
+                  <LeagueTable matches={matches} />
+                )}
+              </div>
+            ))
           : null}
         {statusMatch === "TODAY"
           ? matchesList?.map((matches) => (
