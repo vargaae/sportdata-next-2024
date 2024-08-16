@@ -14,7 +14,7 @@ const News = async () => {
         SportNEWS - Top Headlines
       </h1>
       <div>
-        {newsData.map((news) => (
+        {newsData && newsData.map((news) => (
           <Link key={news.title} href={news.url} legacyBehavior>
             <a target="_blank">
               <div className="relative w-full h-[150px] mb-4 group">

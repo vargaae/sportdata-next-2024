@@ -13,7 +13,7 @@ const Sidebar: FC = async () => {
         </h1>
 
         <ul className="space-y-2">
-          {Leagues.map((league) => (
+          {Leagues && Leagues.map((league) => (
             <div key={league?.id} className="flex">
               <SideLinks
                 href={league.href}
