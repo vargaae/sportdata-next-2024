@@ -13,8 +13,8 @@
 <h1 align="center">
 Sport App fetches data from different API-s about sport championships, matches like Football-data and News API.
 </h1>
-<h2 align="center"> 🚀 NEW NEXTJS VERSION OF SPORTDATA APP with Football-data and News - Deployed with AWS : </h2>
-<p align="center"> (https://main.dphbh5gd0hyse.amplifyapp.com/)</p>
+<h2 align="center"> 🚀 NEW NEXTJS VERSION OF SPORTDATA APP with Football-data and News - Deployed on Render : </h2>
+<p align="center"> (https://sportdata-next-2024.onrender.com)</p>
 
 ## 🛠 Features:
 
@@ -37,16 +37,15 @@ Sport App fetches data from different API-s about sport championships, matches l
 ## Available Scripts
 
 In the project directory, you can run:
-First, run the development server:
 
 ```bash
-npm run dev
+npm run start
 # or
-yarn dev
+yarn start
 # or
-pnpm dev
+pnpm start
 # or
-bun dev
+bun start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
