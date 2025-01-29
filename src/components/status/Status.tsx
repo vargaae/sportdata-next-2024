@@ -1,7 +1,7 @@
 "use client";
 
 import { matchesType } from "@/types";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LeagueTable from "../league-table/LeagueTable";
 
 const Status = ({
@@ -13,6 +13,11 @@ const Status = ({
 }) => {
   const [statusMatch, setStatusMatch] = useState<string>("FINISHED");
 
+  useEffect(() => {
+    if (matchesList == null) setStatusMatch("FINISHED")
+
+  }, [])
+  
   return (
     <div>
       <div className="flex space-x-4 mb-2 md:mb-4">
