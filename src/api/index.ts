@@ -44,7 +44,7 @@ export const filterLeague = async (filterData: string) => {
   const getLeague = await getMatchesFootball();
   const filterLeague: matchesType[] = getLeague?.matches;
   // const getData = filterLeague.filter(
-  const getData = filterLeague.slice().filter(
+  const getData = filterLeague.filter(
     (item) => item.competition.name === filterData
     // (item) => item.competition.code === filterData
   );
@@ -54,7 +54,7 @@ export const filterLeagueFinished = async (filterData: string) => {
   const getLeague = await getMatchesFootballFinished();
   const filterLeague: matchesType[] = getLeague?.matches;
   // const getData = filterLeague.filter(
-  const getData = filterLeague.slice().filter(
+  const getData = filterLeague.filter(
     (item) => item.competition.name === filterData
     // (item) => item.competition.code === filterData
   );
@@ -65,7 +65,7 @@ export const filterFinishedMatches = async (filterData: string) => {
   const getMatches = await getMatchesFootball();
   const filterMatches: matchesType[] = getMatches?.matches;
   const getFinishedMatchesData = filterMatches.filter(
-  // const getFinishedMatchesData = filterLeague.slice().filter(
+  // const getFinishedMatchesData = filterLeague.filter(
     (item) => item.status === "FINISHED"
     // (item) => item.status === filterData
   );
