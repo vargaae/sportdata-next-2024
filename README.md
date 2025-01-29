@@ -1,4 +1,5 @@
 # SportDATA Web App - Next JS | Typescript | API
+## Earlier repository of the Project
 
 <div align="center">
   <img alt="Application image" src="https://vargaae.hu/images/projects/sportdata-git.png" width="700" />
@@ -13,8 +14,8 @@
 <h1 align="center">
 Sport App fetches data from different API-s about sport championships, matches like Football-data and News API.
 </h1>
-<h2 align="center"> 🚀 NEW NEXTJS VERSION OF SPORTDATA APP with Football-data and News - Deployed on Render : </h2>
-<p align="center"> (https://sportdata-next-2024.onrender.com)</p>
+<h2 align="center"> 🚀 NEW NEXTJS VERSION OF SPORTDATA APP with Football-data and News - Deployed with AWS : </h2>
+<p align="center"> (https://main.dphbh5gd0hyse.amplifyapp.com/)</p>
 
 ## 🛠 Features:
 
