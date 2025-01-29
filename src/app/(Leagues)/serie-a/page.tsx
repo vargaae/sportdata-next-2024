@@ -25,7 +25,7 @@ const SerieA = async () => {
           <p>{`${dateConvert}`}</p>
         </div>
       </div>
-      {getSerieA.length == 0 ? (
+      {getSerieA?.length == 0 ? (
         <div className="py-3 px-2 md:px-3 rounded-md flex flex-col bg-gradient-to-b from-[rgb(45,59,87)] to-transparent text-primary mb-2">
           <p>No scheduled matches found in {league} League...</p>
           <Link
@@ -36,13 +36,13 @@ const SerieA = async () => {
           </Link>
         </div>
       ) : (
-        getSerieA.map((data) => (
+        getSerieA?.map((data) => (
           <div key={data.id}>
             <LeagueTable matches={data} />
           </div>
         ))
       )}
-      {getSerieALeagueFinished.length == 0 ? (
+      {getSerieALeagueFinished?.length == 0 ? (
         <div className="py-3 px-2 md:px-3 rounded-md flex flex-col bg-gradient-to-b from-[rgb(45,59,87)] to-transparent text-primary mb-2">
           <p>No finished matches found in {league} League...</p>
           <Link
@@ -53,7 +53,7 @@ const SerieA = async () => {
           </Link>
         </div>
       ) : (
-        getSerieALeagueFinished.map((data) => (
+        getSerieALeagueFinished?.map((data) => (
           <div key={data.id}>
             <LeagueTable matches={data} />
           </div>

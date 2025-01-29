@@ -24,12 +24,12 @@ const PremierLeague = async () => {
           <p>{`${dateConvert}`}</p>
         </div>
       </div>
-      {getEnglishLeague.map((data) => (
+      {getEnglishLeague?.map((data) => (
         <div key={data.id}>
           <LeagueTable matches={data} />
         </div>
       ))}
-      {getEnglishLeagueFinished.map((data) => (
+      {getEnglishLeagueFinished?.map((data) => (
         <div key={data.id}>
           <LeagueTable matches={data} />
         </div>

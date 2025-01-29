@@ -25,7 +25,7 @@ const Eredivisie = async () => {
           <p>{`${dateConvert}`}</p>
         </div>
       </div>
-      {getEredivisie.length == 0 ? (
+      {getEredivisie?.length == 0 ? (
         <div className="py-3 px-2 md:px-3 rounded-md flex flex-col bg-gradient-to-b from-[rgb(45,59,87)] to-transparent text-primary mb-2">
           <p>No scheduled matches found in {league} League...</p>
           <Link
@@ -36,13 +36,13 @@ const Eredivisie = async () => {
           </Link>
         </div>
       ) : (
-        getEredivisie.map((data) => (
+        getEredivisie?.map((data) => (
           <div key={data.id}>
             <LeagueTable matches={data} />
           </div>
         ))
       )}
-      {getEredivisieLeagueFinished.length == 0 ? (
+      {getEredivisieLeagueFinished?.length == 0 ? (
         <div className="py-3 px-2 md:px-3 rounded-md flex flex-col bg-gradient-to-b from-[rgb(45,59,87)] to-transparent text-primary mb-2">
           <p>No finished matches found in {league} League...</p>
           <Link
@@ -53,7 +53,7 @@ const Eredivisie = async () => {
           </Link>
         </div>
       ) : (
-        getEredivisieLeagueFinished.map((data) => (
+        getEredivisieLeagueFinished?.map((data) => (
           <div key={data.id}>
             <LeagueTable matches={data} />
           </div>

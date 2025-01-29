@@ -25,7 +25,7 @@ const Brasileiro = async () => {
           <p>{`${dateConvert}`}</p>
         </div>
       </div>
-      {getBrasileiro.length == 0 ? (
+      {getBrasileiro?.length == 0 ? (
         <div className="py-3 px-2 md:px-3 rounded-md flex flex-col bg-gradient-to-b from-[rgb(45,59,87)] to-transparent text-primary mb-2">
           <p>No scheduled matches found in {league} League...</p>
           <Link
@@ -36,13 +36,13 @@ const Brasileiro = async () => {
           </Link>
         </div>
       ) : (
-        getBrasileiro.map((data) => (
+        getBrasileiro?.map((data) => (
           <div key={data.id}>
             <LeagueTable matches={data} />
           </div>
         ))
       )}
-      {getBrasileiroLeagueFinished.length == 0 ? (
+      {getBrasileiroLeagueFinished?.length == 0 ? (
         <div className="py-3 px-2 md:px-3 rounded-md flex flex-col bg-gradient-to-b from-[rgb(45,59,87)] to-transparent text-primary mb-2">
           <p>No finished matches found in {league} League...</p>
           <Link
@@ -53,7 +53,7 @@ const Brasileiro = async () => {
           </Link>
         </div>
       ) : (
-        getBrasileiroLeagueFinished.map((data) => (
+        getBrasileiroLeagueFinished?.map((data) => (
           <div key={data.id}>
             <LeagueTable matches={data} />
           </div>
