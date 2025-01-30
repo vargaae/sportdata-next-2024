@@ -1,5 +1,4 @@
 # SportDATA Web App - Next JS | Typescript | API
-## Earlier repository of the Project
 
 <div align="center">
   <img alt="Application image" src="https://vargaae.hu/images/projects/sportdata-git.png" width="700" />
@@ -14,8 +13,8 @@
 <h1 align="center">
 Sport App fetches data from different API-s about sport championships, matches like Football-data and News API.
 </h1>
-<h2 align="center"> 🚀 NEW NEXTJS VERSION OF SPORTDATA APP with Football-data and News - Deployed with Vercel : </h2>
-<p align="center"> (sportdata-next-2024-git-prod-vargaaes-projects.vercel.app)</p>
+<h2 align="center"> 🚀 SPORTDATA APP with Football-data and News - Deployed to Vercel : </h2>
+<p align="center"> (https://sportdata-next-2024.vercel.app/)</p>
 
 ## 🛠 Features:
 
@@ -50,7 +49,5 @@ bun start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
