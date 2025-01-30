@@ -14,8 +14,8 @@
 <h1 align="center">
 Sport App fetches data from different API-s about sport championships, matches like Football-data and News API.
 </h1>
-<h2 align="center"> 🚀 NEW NEXTJS VERSION OF SPORTDATA APP with Football-data and News - Deployed with AWS : </h2>
-<p align="center"> (https://main.dphbh5gd0hyse.amplifyapp.com/)</p>
+<h2 align="center"> 🚀 NEW NEXTJS VERSION OF SPORTDATA APP with Football-data and News - Deployed with Vercel : </h2>
+<p align="center"> (sportdata-next-2024-git-prod-vargaaes-projects.vercel.app)</p>
 
 ## 🛠 Features:
 
@@ -31,7 +31,7 @@ Sport App fetches data from different API-s about sport championships, matches l
 
 ## 🛠 Front End:
 
-- React 18.2
+- React 18
 - TypeScript
 - TailwindCSS
 
